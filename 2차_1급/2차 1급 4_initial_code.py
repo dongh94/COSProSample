@@ -4,6 +4,12 @@
 def solution(arr, K):
     #여기에 코드를 작성해주세요.
     answer = 0
+    n = len(arr)
+    for i in range(0, n):
+        for j in range(i+1, n):
+            for m in range(j+1, n):
+                if (arr[i] + arr[j] + arr[m]) % K == 0:
+                    answer += 1
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.

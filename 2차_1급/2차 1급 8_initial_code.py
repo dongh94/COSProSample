@@ -3,12 +3,13 @@ def solution(arr):
     idx = 0
     answer = [0 for _ in range(len(arr))]
     while left <= right:
-        if left % 2 == 0:
+        if idx % 2 == 0: # 0 1 2
             answer[idx] = arr[left]
             left += 1
-        else:
+        else: # 5 4 3
             answer[idx] = arr[right]
             right -= 1
+
         idx += 1
     return answer
 

@@ -3,9 +3,9 @@ def solution(money):
     counter = 0
     idx = len(coin) - 1
     while money:
-        counter += @@@
-        money %= @@@
-        idx -= @@@
+        counter += money // coin[idx]
+        money %= coin[idx]
+        idx -= 1
     return counter
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.

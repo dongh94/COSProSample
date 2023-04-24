@@ -4,6 +4,18 @@
 def solution(commands):
     # 여기에 코드를 작성해주세요.
     answer = []
+    x = y = 0
+    for i in range(len(commands)):
+        if commands[i] == "L":
+            x -= 1
+        elif commands[i] == "R":
+            x += 1
+        elif commands[i] == "U":
+            y += 1
+        elif commands[i] == "D":
+            y -= 1
+    answer.append(x)
+    answer.append(y)
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
