@@ -4,6 +4,7 @@
 def solution(s1, s2):
     # 여기에 코드를 작성해주세요.
     answer = 0
+
     return answer
 
 # 아래는 테스트케이스 출력을 해보기 위한 코드입니다.
