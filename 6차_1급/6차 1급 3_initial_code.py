@@ -3,9 +3,12 @@
 
 def solution(arr, K):
     #여기에 코드를 작성해주세요.
-    answer = 0
-    return answer
+    answer = float("inf")
+    arr.sort()
+    for i in range(len(arr) - (K - 1)):
+        answer = min(answer, arr[i+(K-1)] - arr[i])
 
+    return answer
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
 arr = [9, 11, 9, 6, 4, 19]
 K = 4

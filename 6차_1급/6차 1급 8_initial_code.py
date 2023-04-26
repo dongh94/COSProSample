@@ -31,9 +31,9 @@ def func_c(arr):
     return ret
 
 def solution(S):
-    check = func_@@@(@@@)
-    dp = func_@@@(@@@)
-    answer = func_@@@(@@@)
+    check = func_b(S)
+    dp = func_a(check)
+    answer = func_c(dp)
     return answer
 
 
