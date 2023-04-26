@@ -11,8 +11,8 @@ def solution(k):
         current = i
         calculated = 0
         while current != 0:
-            @@@
-            @@@
+            calculated += (current % 10)**3
+            current //= 10
         if calculated == i:
             answer.append(i)
     return answer
