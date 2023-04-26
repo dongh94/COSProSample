@@ -4,7 +4,18 @@
 def solution(s1, s2):
     # 여기에 코드를 작성해주세요.
     answer = 0
+    length01 = len(s1)
+    length02 = len(s2)
 
+    for i in range(length01):
+        if s1[0:i+1] == s2[-(i+1):]:
+            answer = max(answer, i+1)
+
+    for j in range(length02):
+        if s2[0:j+1] == s1[-(j+1):]:
+            answer = max(answer, j+1)
+
+    answer = length01 + length02 - answer
     return answer
 
 # 아래는 테스트케이스 출력을 해보기 위한 코드입니다.
