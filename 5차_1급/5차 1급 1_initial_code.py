@@ -5,7 +5,7 @@ def solution(n):
 	steps[2] = 2
 	steps[3] = 4
 	for i in range(4, n+1):
-		steps[i] = @@@
+		steps[i] = steps[i-1] + steps[i-2] + steps[i-3]
 	answer = steps[n]
 	return answer
 
@@ -16,7 +16,7 @@ ret1 = solution(n1)
 #[실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
 print("solution 함수의 반환 값은", ret1, "입니다.")
 
-n2 = 4
+n2 = 5
 ret2 = solution(n2)
 
 #[실행] 버튼을 누르면 출력 값을 볼 수 있습니다.

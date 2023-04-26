@@ -4,6 +4,16 @@
 def solution(enemies, armies):
     #여기에 코드를 작성해주세요.
     answer = 0
+    enemies.sort()
+    armies.sort()
+    while enemies and armies:
+        for idx, army in enumerate(armies):
+            if army >= enemies[0]:
+                answer += 1
+                armies.pop(idx)
+                print(armies)
+                break
+        enemies.pop(0)
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
@@ -16,6 +26,13 @@ print("solution 함수의 반환 값은", ret1, "입니다.")
 
 enemies2 = [1, 1, 1]
 armies2 = [1, 2, 3, 4]
+ret2 = solution(enemies2, armies2)
+
+#[실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+print("solution 함수의 반환 값은", ret2, "입니다.")
+
+enemies2 = [2, 3, 5]
+armies2 = [1, 2, 3, 4, 5]
 ret2 = solution(enemies2, armies2)
 
 #[실행] 버튼을 누르면 출력 값을 볼 수 있습니다.

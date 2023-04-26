@@ -1,7 +1,8 @@
 def find(parent, u):
     if u == parent[u]:
         return u
-    parent[u] = @@@
+    parent[u] = find(parent, parent[u])
+    print(parent[u])
     return parent[u]
 
 def merge(parent, u, v):
@@ -9,12 +10,12 @@ def merge(parent, u, v):
     v = find(parent, v)
     if u == v:
         return True
-    @@@
+    parent[u] = v
     return False
 
 def solution(n, connections):
     answer = 0
-    parent = @@@
+    parent = [i for i in range(n+1)]
     for i, connection in enumerate(connections):
         if merge(parent, connection[0], connection[1]):
             answer = i + 1

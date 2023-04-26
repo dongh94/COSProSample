@@ -4,6 +4,17 @@
 def solution(number, target):
     #여기에 코드를 작성해주세요.
     answer = 0
+    INF = float('inf')
+    dp = [INF]*20001
+    dp[number] = 0
+    for i in range(number, 20000):
+        if i + 1 <= 20000:
+            dp[i+1] = min(dp[i]+1, dp[i+1])
+        if i - 1 >= 0:
+            dp[i-1] = min(dp[i]+1, dp[i-1])
+        if i * 2 <= 20000:
+            dp[i*2] = min(dp[i]+1, dp[i*2])
+    answer =dp[target]
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.

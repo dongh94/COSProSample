@@ -4,7 +4,7 @@ def solution(number):
     while number > 0:
         number_count[number % 10] += 1
         number //= 10
-    for i in range(10):
+    for i in range(9, -1, -1):
         if number_count[i] != 0:
             answer += (str(i) + str(number_count[i]))
     return answer
